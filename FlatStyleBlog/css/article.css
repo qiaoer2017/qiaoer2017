@@ -1,0 +1,31 @@
+.banner .container h1{
+    border: none;
+}
+.banner{
+    height:200px;
+}
+
+.banner .container{
+    top:10px;
+}
+
+.content {
+    background: #fff;
+    font-size: 14px;
+    color: #333;
+}
+.content-wrapper{
+    width:80%;
+    margin:0 auto;
+    line-height: 2;
+    padding-bottom: 20px;
+}
+
+.article-info{
+    text-align: right;
+    color: #999;
+}
+
+article p{
+    margin-top: 10px;
+}

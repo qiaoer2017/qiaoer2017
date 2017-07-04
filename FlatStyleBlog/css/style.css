@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+body {
+    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    color: #666;
+    background: url("../img/banner.jpg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+    height: 50px;
+    /*background: #ccc;*/
+}
+
+.banner {
+    height: 500px;
+    /*background: #bbb;*/
+    position: relative;
+}
+
+nav ul {
+    float: right;
+}
+
+nav a, .banner .more a {
+    color: #fff;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    line-height: inherit;
+}
+
+nav .logo {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.banner .container {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    color: #fff;
+}
+
+.banner .container h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+    border-top: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    width: 120px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.banner .container p {
+    font-size: 17px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.banner .container button {
+    border: none;
+    margin-top: 30px;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 14px;
+    background: #dd4942;
+    outline: none;
+    cursor: pointer;
+}
+
+.banner .container button:active {
+    background: #bb3f39;
+}
+
+.banner .more {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.banner .more div {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.green-section {
+    background: #50c7af;
+    color: #fff;
+}
+
+.green-section .container {
+    width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.green-section h2, .green-section h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.green-section h3 {
+    width: 260px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #46bba3;
+}
+
+.green-section .container p {
+    line-height: 20px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.green-section .icon {
+    margin-top: 40px;
+}
+
+.green-section .icon > div {
+    display: inline-block;
+    margin-left: 35px;
+
+}
+
+.green-section .icon div div {
+    width: 50px;
+    height: 50px;
+    outline: 2px solid #41af98;
+    display: inline-block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.green-section .icon > div:first-child {
+    margin-left: 0;
+}
+
+.green-section .icon div i {
+    font-size: 30px;
+    line-height: 50px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    opacity: 0.7;
+}
+
+.deepblue-section {
+    color: #fff;
+}
+
+.deepblue-section .part1 {
+    background: #323a44;
+}
+
+.deepblue-section .part2 {
+    background: #2d363f;
+}
+
+.deepblue-section .part3 {
+    background: #2b313b;
+}
+
+.deepblue-section > section:after {
+    content: ' ';
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+.deepblue-section .figure-section {
+    width: 40%;
+    line-height: 0;
+    float: left;
+}
+
+.part2 .figure-section {
+    float: right;
+}
+
+.part2 .text-section {
+    float: left;
+}
+
+.deepblue-section img {
+    width: 100%;
+}
+
+.deepblue-section .text-section {
+    width: 60%;
+    float: right;
+    margin-top: 65px;
+    text-indent: 60px;
+}
+
+.text-section h2 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.text-section h3 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.text-section p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 80%;
+    text-indent: 0;
+    padding-left: 60px;
+}
+
+.purple-section {
+    background: #5e5c9b;
+    color: #fff;
+    text-align: center;
+}
+
+.purple-section {
+    padding: 30px 0;
+}
+
+.purple-section h2 {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 3;
+}
+
+.purple-section > p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.purple-section .cards {
+    width: 70%;
+    margin: 60px auto;
+    overflow: auto;
+}
+
+.card {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 800;
+    width: 60%;
+    margin: 40px auto 20px;
+    /* text-align: left; */
+    position: relative;
+
+}
+
+.card p {
+    line-height: 2;
+    font-size: 14px;
+    /* margin-top: 20px; */
+    margin: 20px auto 40px;
+    width: 60%;
+}
+
+.card i {
+    font-size: 17px;
+    /* margin-right: -21px; */
+    position: absolute;
+    left: -30px;
+    color: #50c7af;
+}
+
+.card1 {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.card3 {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card4 {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.contact {
+    /*background: #ccc;*/
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.contact > div {
+    width: 60%;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 90px 0;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.contact .text {
+    float: left;
+    width: 67%;
+    overflow-x: hidden;
+}
+
+.contact .buttons {
+    float: left;
+    width: 30%;
+    overflow-x: hidden;
+}
+
+.contact h2 {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 5px;
+}
+
+.contact p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.buttons button {
+    display: block;
+    width: 80%;
+    border: none;
+    background: #dd4942;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin: 0px auto 15px;
+}
+
+footer {
+    height: 150px;
+    background: rgba(45, 48, 54, 0.9);
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    font-size: 17px;
+    padding-top: 30px;
+}
+
+footer p i {
+    font-size: 25px;
+    margin: 10px;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    width: 300px;
+    background: rgba(51, 51, 50, 0.7);
+    z-index: 100;
+    padding: 20px 0;
+
+}
+aside a {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 50px;
+}
+
+aside a:hover {
+    background: rgba(51, 51, 51, 0.9);
+}
+
+aside li {
+
+}
+
+.mask {
+    position: fixed;
+    display: none;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    z-index: 99;
+    background: rgba(51, 51, 50, 0.3);
+}
+.back-to-top{
+    display: inline-block;
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    background: rgba(0, 0, 0, 0.7);
+    width:50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+.back-to-top i{
+    display: inline-block;
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height: 50px;
+    font-size:30px;
+    color: #fff;
+}
