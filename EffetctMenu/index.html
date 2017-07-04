@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特效下拉菜单</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .expand-wrapper .menu {
+            height: 50px;
+        }
+
+        .menu {
+            background: #333d4c;
+        }
+
+        .menu ul {
+            width: 800px;
+            margin: 0 auto;
+            position: relative;
+            list-style: none;
+            height: 100%;
+        }
+
+        .indicator {
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            bottom: -20px;
+            left: 200%;
+            border-bottom: 20px solid #333d4c;
+            border-left: 20px solid transparent;
+            border-top: 20px solid transparent;
+            border-right: 20px solid transparent;
+
+        }
+
+        .menu li {
+            float: left;
+            width: 20%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            color: #ffffff;
+            background: #333d4c;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .menu li.current {
+            background: #333;
+        }
+
+        .expand-box {
+            margin-top: 20px;
+            background: #333d4c;
+            height: 100px;
+            position: relative;
+            left: -200%;
+            overflow: hidden;
+        }
+
+        .expand-box .sub-nav {
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+
+        .expand-box .sub-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .nav-box {
+            height: 80px;
+            line-height: 80px;
+            width: 500%;
+            /*margin-left:-100%;*/
+        }
+
+        .close-button {
+            width: 148px;
+            height: 20px;
+            margin: 0 auto;
+            cursor: pointer;
+            background: url("close.png") no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+<div class="expand-wrapper">
+    <div class="menu">
+        <ul>
+            <li>首页</li>
+            <li>课程大厅</li>
+            <li>学习中心</li>
+            <li>个人中心</li>
+            <li>关于我们</li>
+            <div class="indicator">
+
+            </div>
+        </ul>
+
+    </div>
+    <div class="expand-box">
+
+        <div class="nav-box">
+
+            <div class="sub-nav">
+                <a href="#">慕课网主页</a>
+            </div>
+            <div class="sub-nav">
+                <a href="#">前端课程</a><a href="#">手机开发</a><a href="#">后台编程</a>
+            </div>
+            <div class="sub-nav">
+                <a href="#">JavaScript</a><a href="#">CSS</a><a href="#">jQuery</a>
+            </div>
+            <div class="sub-nav">
+                <a href="#">个人信息</a>
+            </div>
+
+            <div class="sub-nav">
+                <a href="#">公司简介</a>
+            </div>
+        </div>
+        <div class="close-button">
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script>
+    $(function () {
+        $('.menu li').click(function () {
+            if ($(this).hasClass('current')) {
+                $('.indicator').animate({
+                    left: '200%'
+                });
+                $('.expand-box').animate({
+                    left: '-200%'
+                });
+                $('.expand-box .nav-box').animate({
+//                    marginLeft: -(index * 100) + '%'
+                });
+                $(this).removeClass('current');
+            } else {
+                var index = $(this).index();
+//            alert(index);
+                $(this).addClass('current').siblings().removeClass('current');
+                $('.indicator').animate({
+                    left: 70 + (index * 160) + 'px'
+                });
+
+                $('.expand-box').animate({
+                    left: '0'
+                });
+
+                $('.expand-box .nav-box').animate({
+                    marginLeft: -(index * 100) + '%'
+                });
+            }
+        });
+
+        $('.close-button').click(function () {
+            $('.menu li').removeClass('current');
+            $('.indicator').animate({
+                left: '200%'
+            });
+            $('.expand-box').animate({
+                left: '-200%'
+            });
+        });
+    });
+</script>
+</body>
+</html>
