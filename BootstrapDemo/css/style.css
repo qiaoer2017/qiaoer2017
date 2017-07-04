@@ -1,0 +1,271 @@
+@charset "UTF-8";
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    color: #666;
+}
+
+.pencil-icon {
+    width: 40px;
+    height: 40px;
+    background: #40d2b1;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    margin-right: 20px;
+}
+
+/*导航*/
+.navbar-default {
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 6px rgba(50, 50, 50, 0.25);
+    z-index: 1000;
+}
+
+.navbar-header > a.navbar-brand {
+    font-weight: bold;
+    color: #40d2b1;
+    height: 70px;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.navbar-nav > li a {
+    height: 70px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar-toggle {
+    margin-top: 18px;
+    height: 34px;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+    background: #40d2b1;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/*======home======*/
+
+#home {
+    margin-top: 70px;
+    color: #fff;
+    text-align: center;
+    background: url("../img/home-bg.jpg") no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 90px 0;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin: 0 0 25px;
+}
+
+#home p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+#home img {
+    margin-top: 30px;
+}
+
+/*======bbs======*/
+#bbs {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#bbs a {
+    color: #666;
+    text-decoration: none;
+}
+
+#bbs .col-md-4 {
+    padding: 15px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#bbs .col-md-4:hover {
+    background: rgb(238, 238, 238);
+    background: rgba(238, 238, 238, 0.39);
+    border-radius: 5px;
+    box-shadow: 1px 1px 11px rgba(50, 50, 50, 0.3);
+}
+
+#bbs img {
+    margin: 0 auto;
+}
+
+/*html5*/
+#html5 {
+    padding: 80px 0;
+    background: #f8f8f8;
+}
+
+#html5 h2, #bootstrap h2, #latest-courses h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#html5 p, #bootstrap p {
+    line-height: 25px;
+}
+
+/*bootstrap*/
+#bootstrap {
+    padding: 80px 0;
+    background: #fff;
+}
+
+/*latest course*/
+#latest-courses {
+    padding: 80px 0;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+#latest-courses h2 {
+    margin-bottom: 70px;
+}
+
+#latest-courses .course {
+    background: #fff;
+    padding: 0;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#latest-courses .course:hover {
+    border-radius: 5px;
+    box-shadow: 1px 1px 11px rgba(50, 50, 50, 0.3);
+}
+
+#latest-courses img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#latest-courses .btn-default {
+    color: #40d2b1;
+    border: 1px solid #40d2b1;
+    margin: 20px 0 30px;
+    border-radius: 0;
+    padding: 10px 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#latest-courses .btn-default:hover {
+    background: #40d2b1;
+    color: #fff;
+}
+
+#latest-courses .course-row {
+    margin-bottom: 20px;
+}
+
+
+
+/*app*/
+#app {
+    padding: 80px 0;
+    background: #fff;
+}
+
+#app .btn-default {
+    border: none;
+    background: #40d2b1;
+    color: white;
+    border-radius: 0;
+    padding: 8px 30px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+#app p {
+    line-height: 1.5;
+    margin: 40px 0 25px;
+}
+
+#app .btn-default:hover {
+    background: rgb(44, 142, 120);
+}
+
+/*contacts*/
+#contacts {
+    background: url("../img/contact-bg.png") no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#contacts .glyphicon {
+    margin-right: 1em;
+}
+
+#contacts h2 {
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+#contacts p {
+    line-height: 2;
+}
+
+#contacts .form-control {
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#contacts textarea.form-control {
+    height: auto;
+}
+
+#contacts input[type=submit] {
+    background: #40d2b1;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+#contacts footer {
+    text-align: center;
+    margin-top: 90px;
+}
+
+#contacts .filter {
+    padding-bottom: 20px;
+}
