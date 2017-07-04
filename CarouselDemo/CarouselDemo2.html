@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<aahtml>
+<head>
+	<meta charset="UTF-8">
+	<title>使用jQuery实现轮播图</title>
+	<style type="text/css">
+
+		.carousel {
+		    width: 810px;
+		    height: 343.64px;
+		    position: relative;
+		    margin: 0 auto;
+		    z-index: 10;
+		    overflow: hidden;
+		}
+
+		.list {
+		    width: 4860px;
+		    position: absolute;
+		    left: -810px;
+		    top: 0;
+		}
+
+		.list img {
+		    max-width: 810px;
+		    float: left;
+		}
+
+		.buttons {
+		    position: absolute;
+		    left: 50%;
+		    bottom: 10px;
+		    z-index: 10;
+		    width: 100px;
+		    height: 20px;
+		    margin-left: -50px;
+		    text-align: center;
+		    opacity: 0.7;
+		}
+
+		.buttons span {
+		    display: inline-block;
+		    border: 1px solid #fff;
+		    -webkit-border-radius: 50%;
+		    -moz-border-radius: 50%;
+		    border-radius: 50%;
+		    width: 10px;
+		    height: 10px;
+		    margin: 0 4px;
+		    cursor: pointer;
+		}
+
+		.on {
+		    background: #ff4a63;
+		}
+
+		.arrow {
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -25px;
+		    z-index: 10;
+		    width: 25px;
+		    height: 50px;
+		    text-align: center;
+		    line-height: 50px;
+		    background: rgba(0, 0, 0, 0.3);
+		    font-size: 20px;
+		    color: #fff;
+			text-decoration: none;
+
+		    /*display: none;*/
+		}
+
+		.arrow:hover{
+		    cursor: pointer;
+		}
+		.carousel:hover .arrow{
+		    display: inline-block;
+		}
+		.carousel:hover .buttons{
+		    opacity:1;
+		}
+		.arrow:hover{
+		    background: rgba(0,0,0,0.5);
+		}
+		#prev {
+		    left: 0;
+		}
+
+		#next {
+		    right: 0;
+		}
+</style>
+</head>
+
+<body>
+<div class="carousel">
+    <div class="list">
+        <a href="#"><img src="img/banner4.png" alt=""></a>
+        <a href="#"> <img src="img/banner1.png" alt=""></a>
+        <a href="#"><img src="img/banner2.png" alt=""></a>
+        <a href="#"> <img src="img/banner3.png" alt=""></a>
+        <a href="#"> <img src="img/banner4.png" alt=""></a>
+        <a href="#"> <img src="img/banner1.png" alt=""></a>
+    </div>
+    <div class="buttons">
+    	<span class="on"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <a href="javascript:void(0);" id="next" class="arrow">&gt;</a>
+    <a href="javascript:void(0);" id="prev" class="arrow">&lt;</a>
+</div>
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+//焦点图
+$(function () {
+    var len = 4;
+    var currentIndex = 1;
+    var sliding = false;
+    var timer;
+
+    var list = $('.list');
+    var next = $('#next');
+    var prev = $('#prev');
+
+    play();
+
+    $('.carousel').mouseover(function () {
+        stop();
+    }).mouseleave(function () {
+        play();
+    });
+
+    next.click(function () {
+        if (!sliding) {
+            if (currentIndex >= len) {
+                currentIndex = 1;
+            } else {
+                currentIndex++;
+            }
+            switchingCurrentItem(-810);
+            changeIndicator();
+        }
+
+
+    });
+    prev.click(function () {
+        if (!sliding) {
+            if (currentIndex <= 1) {
+                currentIndex = len;
+            } else {
+                currentIndex--;
+            }
+            switchingCurrentItem(810);
+            changeIndicator();
+        }
+    });
+
+    $('.buttons span').click(function () {
+        if (!sliding) {
+            var myIndex = $(this).index() + 1;
+            var offset = myIndex - currentIndex;
+
+            switchingCurrentItem(offset * (-810));
+            currentIndex = myIndex;
+            changeIndicator();
+        }
+    });
+
+    function switchingCurrentItem(offset) {
+        sliding = true;
+
+        var newLeft = parseInt(list.css('left')) + offset;
+        var time = 200;//位移总时间
+        var interval = 5;//位移间隔时间
+        var speed = offset / (time / interval);
+
+        function slide() {
+            if ((offset < 0 && parseInt(list.css('left')) > newLeft) || (offset > 0 && parseInt(list.css('left')) < newLeft)) {
+                list.css('left', parseInt(list.css('left')) + speed + 'px');
+                setTimeout(slide, interval);
+            } else {
+
+                if (newLeft < len * (-810)) {
+                    newLeft = -810;
+                } else if (newLeft > -810) {
+                    newLeft = len * (-810);
+                }
+                list.css('left', newLeft + 'px');
+                sliding = false;
+
+            }
+        }
+
+        slide();
+    }
+
+    function changeIndicator() {
+        for (var i = 0; i < len; i++) {
+            var span = $('.buttons span:nth-child(' + (i + 1) + ')');
+            if (span.hasClass('on')) {
+                span.removeClass('on');
+                break;
+            }
+        }
+        $('.buttons span:nth-child(' + currentIndex + ')').addClass('on');
+    }
+
+    function play() {
+        timer = setInterval(function () {
+            next.click();
+        }, 3000);
+    }
+
+    function stop() {
+        clearInterval(timer);
+    }
+});
+
+</script>
+</body>
+</html>
