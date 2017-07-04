@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.carousel {
+    margin-top: 10px;
+}
+
+.aside ul {
+    padding-left: 20px;
+}
+
+.aside li {
+    margin: 3px 0;
+    display: inline-block;
+    width: 45%;
+}
+
+.products h3 {
+    height: 28px;
+    font-size: 15px;
+    line-height: 28px;
+    padding-left: 7px;
+}
+
+.products ul li:first-child {
+    border-top: 2px solid #096dba;
+}
+
