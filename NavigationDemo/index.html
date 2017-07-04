@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <li class="current"><a href="#item1">1F</a></li>
+        <li><a href="#item2">2F</a></li>
+        <li><a href="#item3">3F</a></li>
+        <li><a href="#item4">4F</a></li>
+        <li><a href="#item5">5F</a></li>
+    </ul>
+</div>
+<div class="content wrap">
+    <div class="item" id="item1">1F</div>
+    <div class="item" id="item2">2F</div>
+    <div class="item" id="item3">3F</div>
+    <div class="item" id="item4">4F</div>
+    <div class="item" id="item5">5F</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script>
+    $(function () {
+        var menuLi = $(".menu li");
+        var item1 = $("#item1");
+        var item2 = $("#item2");
+        var item3 = $("#item3");
+        var item4 = $("#item4");
+        var item5 = $("#item5");
+
+        menuLi.click(function () {
+            menuLi.removeClass("current");
+            $(this).addClass("current");
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            var offsetTop1 = item1.position().top;
+            var offsetTop2 = item2.position().top;
+            var offsetTop3 = item3.position().top;
+            var offsetTop4 = item4.position().top;
+            var offsetTop5 = item5.position().top;
+
+            menuLi.removeClass("current");
+
+            if (scrollTop >= offsetTop1 && scrollTop < offsetTop2) {
+                menuLi.eq(0).addClass("current");
+            }
+            if (scrollTop >= offsetTop2 && scrollTop < offsetTop3) {
+                menuLi.eq(1).addClass("current");
+            }
+            if (scrollTop >= offsetTop3 && scrollTop < offsetTop4) {
+                menuLi.eq(2).addClass("current");
+            }
+            if (scrollTop >= offsetTop4 && scrollTop < offsetTop5) {
+                menuLi.eq(3).addClass("current");
+            }
+            if (scrollTop >= offsetTop5) {
+                menuLi.eq(4).addClass("current");
+            }
+        });
+    });
+</script>
+</body>
+</html>

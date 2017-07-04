@@ -1,0 +1,73 @@
+body {
+    font-family: "SF UI Text", "Arial Black";
+}
+
+.menu {
+    position: fixed;
+    left: 50%;
+    width: 80px;
+    margin-left: 450px;
+    top: 50%;
+    margin-top: -145px;
+}
+
+.menu li {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.menu li:last-child {
+    margin-bottom: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu a:hover, .current a {
+    color: #ffffff;
+    background: #29b2ff;
+}
+
+.wrap {
+    width: 900px;
+    height:3250px;
+    margin: 0 auto;
+}
+
+.content .item {
+    height: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 500px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#item1 {
+    background: #ffb190;
+}
+
+#item2 {
+    background: #ffe98a;
+}
+
+#item3 {
+    background: #98ff9d;
+}
+
+#item4 {
+    background: #64e7ff;
+}
+
+#item5 {
+    background: #dd7aff;
+}
